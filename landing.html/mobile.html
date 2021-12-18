@@ -6,6 +6,42 @@
     <link rel="stylesheet" re>
 
     <link rel="stylesheet" href="style.css">
+
+
+    <style>
+          #cart_click{
+            cursor: pointer;
+        }   
+        
+        .add_to_cart{
+            border:1px solid white;
+            width: 20%;
+            height: 45px;
+            margin-left:20px;
+            margin-top:30px;
+            color:rgb(254,252,248);
+            background-color: black;
+            font-size: 12px;
+            border-radius: 17px;
+            padding: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .buy_now{
+            border: 1px solid rgb(0,233,191);
+            width: 20%;
+            height: 45px;
+            color: black;
+            background-color: rgb(0,233,191);
+            border-radius:17px;
+            font-size: 12px;
+            padding: 10px;
+            font-weight: bold;
+            cursor: pointer;
+
+        }
+    </style>
     <style>
         /* body{
             background-color: black;
@@ -108,7 +144,7 @@
     
             </div>
     
-            <div class="cart">
+            <div class="cart"  id="cart_click">
                 <p><i class="fas fa-shopping-cart"></i>CART</p>
                 <div class="cart-count">
                     <!-- <p>5</p> -->
@@ -164,6 +200,7 @@
 ];
 
 var mobile=[];
+var cart=JSON.parse(localStorage.getItem("cartItem")) || [];
 mobiles.map(function (ele) {
 
     var obj={
@@ -208,14 +245,47 @@ mobiles.map(function (ele) {
     price.style.color="white";
 
 
-    div1.append(name,           prod_id,price);
+
+
+
+
+    var add_cart=document.createElement("button");
+    
+    add_cart.setAttribute("class","add_to_cart");
+    add_cart.setAttribute("id","cart");
+
+    add_cart.textContent="ADD TO CART";
+
+
+    add_cart.addEventListener("click",function(){
+
+        // console.log(ele);
+        alert("Your Item is added on cart")
+         addCart(ele);
+
+    });
+
+
+    var buy_now=document.createElement("button");
+    buy_now.textContent="BUY NOW";
+    buy_now.setAttribute("class","buy_now");
+    buy_now.setAttribute('id',"buy");
+
+
+    div1.append(name,prod_id,price,buy_now,add_cart);
     div2.append(img,div1);
     document.querySelector(".mobile").append(div2);
 
 //    localStorage.setItem(JSON.stringify(''))
-    localStorage.setItem("mobile",JSON.stringify(mobile))
+    localStorage.setItem("cartItem",JSON.stringify(mobile))
     
 })
+
+function addCart(ele){
+     console.log(ele);
+    cart.push(ele);
+    localStorage.setItem("cartItem",JSON.stringify(cart));
+}
 </script>
 <script>
     document.querySelector("#search").addEventListener("click", press);
@@ -258,5 +328,15 @@ mobiles.map(function (ele) {
     }
 </script>
 <script src="menu.js"></script>
+<script>
+    document.querySelector("#cart_click").addEventListener("click",function(){
+        console.log("Click on cart")
+       window.location.href="cart.html";
+
+    })
+
+
+
+</script>
 
 

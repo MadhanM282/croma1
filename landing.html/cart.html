@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cart_style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <style>
+        .cart_data>div{
+            border:1px solid white;
+            width: 60%;
+            margin-left: 100px;
+        }
+        button{
+            width: 20%;
+            height: 35px;
+            color:black;
+            background-color: turquoise;
+            margin-top: 15px;
+            padding: 5px;
+            border-radius: 13px;
+            font-size: 17px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="cart_data">
+
+        <!-- div
+<<<<<<< HEAD
+            <img>
+         <div>
+            name
+            id
+            price
+        </div>
+        <div>
+            <h1>This is heading</h1>
+        </div>
+        div -->
+
+        <!-- <div id="payment_div">
+            <h1 style="color: white;">This is payment page</h1>
+        </div> -->
+
+    </div>
+    
+</body>
+</html>
+<script>
+    var cart=JSON.parse(localStorage.getItem("cartItem")) || [];
+    // display(cart);
+
+    if(cart.length==0){
+        var div=document.createElement('div');
+        div.style.border="1px solid black";
+        var heading2=document.createElement('h2');
+        var img=document.createElement('img');
+        img.setAttribute("src","https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/f_auto,q_auto,d_Croma%20Assets:no-product-image.jpg/Croma%20Assets/UI%20Assets//empty-cart.svg/mxw_2048,f_auto")
+        img.style.marginTop="25px";
+        img.style.marginLeft="40px";
+        heading2.textContent="Your Cart is empty";
+        heading2.style.color="white";
+        heading2.style.marginLeft="30px";
+
+        var para=document.createElement('p');
+        para.textContent="looks like you haven't made your choice";
+        para.style.color="white";
+        para.style.marginTop="25px";
+
+        div.append(heading2,para,img);
+        div.style.marginLeft="500px";
+        document.querySelector(".cart_data").append(div);
+
+        
+
+
+    }else{
+        console.log("Not empty",cart);
+
+        cart.map(function(ele,index){
+        var img=document.createElement("img");
+        img.setAttribute("src",ele.img);
+        img.setAttribute("class",'image');
+
+    var div1=document.createElement('div');
+    div1.style.marginBottom="80px";
+    
+    var div2=document.createElement('div');
+    div2.style.display="flex";
+    div2.style.marginTop="40px";
+
+    var name=document.createElement('h2');
+    name.textContent=ele.name;
+    name.style.color="white";
+
+    var prod_id=document.createElement('p');
+    prod_id.textContent=ele.id;
+    prod_id.style.color="white";
+
+    var price=document.createElement('h2');
+    price.textContent=ele.price;
+    price.style.color="white";
+
+
+    var del=document.createElement('button');
+    del.textContent="Delete";
+4
+    del.addEventListener("click",function(index){
+        var cart=JSON.parse(localStorage.getItem("cartItem"))
+        cart.splice(index,1);
+        localStorage.setItem("cartItem",JSON.stringify(cart))
+        alert("Your items is delete succesfully");
+
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    div1.append(name,prod_id,price,del);
+    div2.append(img,div1);
+    document.querySelector(".cart_data").append(div2);
+        })
+
+
+     
+
+
+
+    }
+
+
+
+</script>
+<script>
+ 
+
+
+</script>

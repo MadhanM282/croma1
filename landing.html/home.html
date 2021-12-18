@@ -874,6 +874,10 @@ p{
    position: relative;
 }
 
+#cart_click{
+    cursor: pointer;
+}
+
 
 
 </style>
@@ -933,7 +937,7 @@ p{
 
             </div>
 
-            <div class="cart">
+            <div class="cart" id="cart_click">
                 <p><i class="fas fa-shopping-cart"></i>CART</p>
                 <div class="cart-count">
                     <p></p>
@@ -1325,7 +1329,7 @@ function press() {
 
         window.location.href = "laptop.html"
     }
-    if (val === "mobile" || "phone" || "mobiles") {
+    if (val === "mobile") {
         window.location.href = "mobile.html"
     }
     if (val === "tv") {
@@ -1400,5 +1404,21 @@ function showSlides() {
     function aud() {
         window.location.href = "audio.html"
     }
+
+</script>
+
+
+
+<!-- this is for the cart part -->
+
+
+<script>
+    document.querySelector("#cart_click").addEventListener("click",function(){
+        console.log("Click on cart")
+       window.location.href="cart.html";
+
+    })
+
+
 
 </script>

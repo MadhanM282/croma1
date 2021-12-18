@@ -8,6 +8,37 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
     <style>
+           #cart_click{
+            cursor: pointer;
+         }  
+        .add_to_cart{
+            border:1px solid white;
+            width: 20%;
+            height: 45px;
+            margin-left:20px;
+            margin-top:30px;
+            color:rgb(254,252,248);
+            background-color: black;
+            font-size: 12px;
+            border-radius: 17px;
+            padding: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .buy_now{
+            border: 1px solid rgb(0,233,191);
+            width: 20%;
+            height: 45px;
+            color: black;
+            background-color: rgb(0,233,191);
+            border-radius:17px;
+            font-size: 12px;
+            padding: 10px;
+            font-weight: bold;
+            cursor: pointer;
+
+        }
  
     </style>
     <link rel="stylesheet" href="style.css">
@@ -87,7 +118,7 @@
     
             </div>
     
-            <div class="cart">
+            <div class="cart" id="cart_click">
                 <p><i class="fas fa-shopping-cart"></i>CART</p>
                 <div class="cart-count">
                     <p></p>
@@ -132,6 +163,7 @@
     }
 ]
 var audios=[];
+var cart=JSON.parse(localStorage.getItem("cartItem")) || [];
 
 audio.map(function(ele){
     var obj={
@@ -160,13 +192,48 @@ audio.map(function(ele){
     var price=document.createElement('h2');
     price.textContent=ele.price;
     price.style.color="white";
-    div1.append(name,prod_id,price);
+
+
+
+
+    var add_cart=document.createElement("button");
+    
+    add_cart.setAttribute("class","add_to_cart");
+    add_cart.setAttribute("id","cart");
+
+    add_cart.textContent="ADD TO CART";
+
+
+    add_cart.addEventListener("click",function(){
+
+        // console.log(ele);
+        alert("Your Item is added on cart")
+         addCart(ele);
+
+    });
+
+
+    var buy_now=document.createElement("button");
+    buy_now.textContent="BUY NOW";
+    buy_now.setAttribute("class","buy_now");
+    buy_now.setAttribute('id',"buy");
+
+
+
+    div1.append(name,prod_id,price,buy_now,add_cart);
     div2.append(img,div1);
     document.querySelector(".audio").append(div2);
 //    localStorage.setItem(JSON.stringify(''))
-    localStorage.setItem("audio",JSON.stringify(audios))
+    localStorage.setItem("cartItem",JSON.stringify(audios))
 
 })
+
+
+function addCart(ele){
+     console.log(ele);
+    cart.push(ele);
+    localStorage.setItem("cartItem",JSON.stringify(cart));
+}
 
 </script>
 <script>
@@ -207,4 +274,16 @@ audio.map(function(ele){
     document.querySelector(".croma").addEventListener("click", function croma() {
         window.location.href = 'home.html'
     });
+</script>
+
+
+<script>
+    document.querySelector("#cart_click").addEventListener("click",function(){
+        console.log("Click on cart")
+       window.location.href="cart.html";
+
+    })
+
+
+
 </script>
