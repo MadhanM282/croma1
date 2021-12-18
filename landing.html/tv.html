@@ -120,7 +120,7 @@
             </div>
     
             <div class="cart" id="cart_click">
-                <p><i class="fas fa-shopping-cart"></i>CARTItem</p>
+                <p><i class="fas fa-shopping-cart"></i>CART</p>
                 <div class="cart-count">
                     <p></p>
                 </div>
@@ -216,11 +216,20 @@ tv.map(function(ele){
     });
 
 
+
+
+
     var buy_now=document.createElement("button");
     buy_now.textContent="BUY NOW";
     buy_now.setAttribute("class","buy_now");
     buy_now.setAttribute('id',"buy");
 
+
+    buy_now.addEventListener("click",function(){
+        window.location.href="cart.html";
+    })
+
+   
 
 
 

@@ -271,6 +271,10 @@ mobiles.map(function (ele) {
     buy_now.setAttribute("class","buy_now");
     buy_now.setAttribute('id',"buy");
 
+    buy_now.addEventListener("click",function(){
+        window.location.href="cart.html";
+    })
+
 
     div1.append(name,prod_id,price,buy_now,add_cart);
     div2.append(img,div1);
