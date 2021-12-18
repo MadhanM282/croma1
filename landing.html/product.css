@@ -1,4 +1,4 @@
-*{
+/* *{
     background: black;
     color: white;
     margin: 0px;
@@ -7,9 +7,9 @@
     
     
 }
-  
+   */
    /* headerStyle :start */
-   body{
+   /* body{
        height: 1966px;
        
 
@@ -44,7 +44,7 @@ header{
 }
 .pin-box>span>p{
     text-decoration: underline;
-}
+} */
 
 /* .pin-box>input{
     background-color: transparent;
@@ -57,7 +57,7 @@ header{
 
 
 } */
-#map{
+/* #map{
     font-size: 18px;
 }
 #pencil{
@@ -71,7 +71,7 @@ header{
     background-color: black;
     color: white;    
 }
-                        /* headerStyle :Close*/
+                        headerStyle :Close */
 
                         /* <!-- this is main div --> */
                         
@@ -95,7 +95,7 @@ header{
 } */
 
 
-.sticky {
+/* .sticky {
     position: fixed;
     top: 0;
     width: 100%;
@@ -104,10 +104,10 @@ header{
 
   .sticky + .content {
     padding-top: 60px;
-  }
+  } */
 
   /* swipperCategory */
-  .swipper-menu{
+  /* .swipper-menu{
     background-color: #353535;
     width: 100%;
    
@@ -152,7 +152,7 @@ header{
     width: 100%;
     background-color: yellow;
 
-}
+} */
 
 /* this is product page style */
 .containerofproduct{
@@ -269,7 +269,7 @@ h1{
 }
 #productid{
     display: flex;
-    width: 85%;
+    width: 90%;
     /* border: 1px solid; */
     justify-content: space-between;
     align-items: center;
@@ -280,7 +280,7 @@ h1{
     /* align-content: center; */
     margin-left: 10px;
     /* border: 1px solid red; */
-    width:200px
+    width:150px
 
     
 }

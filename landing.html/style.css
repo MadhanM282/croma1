@@ -160,14 +160,14 @@ header{
     width: 50%;
     display: flex;
     /* border: 1px solid red; */
-    background: black;
+    /* background: black; */
     
     
     
     
 }
 .main-nav>.search-box>.input-div{
-    background-color: black; 
+    /* background-color: black;  */
     width: 100%; 
     border-radius: 10px 0px 0px 10px;
     /* border: 1px solid red; */
@@ -194,13 +194,15 @@ header{
 
 .main-nav>.search-box>.search-btn{
     width: 10%;
-    background-color: #00e9bf;
+    /* background-color: #00e9bf; */
+    /* background-color: transparent; */
     border-radius: 10px;
    
     
 }
 #search>i{
     border-radius: 10px;
+    /* background-color: transparent; */
 }
 hr{
     color: rgb(44, 37, 37);

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d7bc18a32d.js" crossorigin="anonymous"></script>
+
     <title>Document</title>
 </head>
 <style>
@@ -949,23 +951,23 @@ p{
             <div class="left-arrow">
                 <i class="fas fa-chevron-left"></i>
             </div>
-            <div class="item1">
-                <img src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1637891062/Croma%20Assets/CMS/Category%20icon/Category%20Icons/Mobile_Phones_adlg8p.svg/mxw_64,f_auto"
+            <div class="item1" >
+                <img class="mob" onclick="mob()" src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1637891062/Croma%20Assets/CMS/Category%20icon/Category%20Icons/Mobile_Phones_adlg8p.svg/mxw_64,f_auto"
                     alt="">
                 <p>Mobile Phones</p>
             </div>
             <div class="item1">
-                <img src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1637891064/Croma%20Assets/CMS/Category%20icon/Category%20Icons/Televisions_ikvrve.svg/mxw_64,f_auto"
+                <img class="tele" onclick="tele()" src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1637891064/Croma%20Assets/CMS/Category%20icon/Category%20Icons/Televisions_ikvrve.svg/mxw_64,f_auto"
                     alt="">
                 <p>Televisions</p>
             </div>
             <div class="item1">
-                <img src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1637891062/Croma%20Assets/CMS/Category%20icon/Category%20Icons/Laptops_cd8zmr.svg/mxw_64,f_auto"
+                <img class="lap" onclick="lap()" src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1637891062/Croma%20Assets/CMS/Category%20icon/Category%20Icons/Laptops_cd8zmr.svg/mxw_64,f_auto"
                     alt="">
                 <p>Laptops</p>
             </div>
             <div class="item1">
-                <img src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1637891060/Croma%20Assets/CMS/Category%20icon/Category%20Icons/Audio_dpxz8t.svg/mxw_64,f_auto"
+                <img class="aud" onclick="aud()" src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1637891060/Croma%20Assets/CMS/Category%20icon/Category%20Icons/Audio_dpxz8t.svg/mxw_64,f_auto"
                     alt="">
                 <p>Audio</p>
             </div>
@@ -1301,7 +1303,7 @@ p{
         window.location.href="croma.html";
     }
     function getItem11(){
-        window.location.href="croma.html";
+        window.location.href="SonyBraviaX85j.html";
     }
     function getItem12(){
         window.location.href="boat stone.html";
@@ -1310,7 +1312,7 @@ p{
         window.location.href="oneplus bullets.html";
     }
     function getItem14(){
-        window.location.href="philips.html";
+        window.location.href="phillips.html";
     }
     function getItem15(){
         window.location.href="airpods.html";
@@ -1374,5 +1376,29 @@ function showSlides() {
     dots[slideIndex - 1].className += " active";
     setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
+
+</script>
+<!-- <script>
+    document.querySelector(".croma").addEventListener("click", function croma() {
+        window.location.href = 'home.html'
+    });
+</script> -->
+<script>
+    document.querySelector(".mob").addEventListener("click", mob);
+    function mob() {
+        window.location.href = "mobile.html"
+    }
+    document.querySelector(".tele").addEventListener("click", tele);
+    function tele() {
+        window.location.href = "tv.html"
+    }
+    document.querySelector(".lap").addEventListener("click", lap);
+    function lap() {
+        window.location.href = "laptop.html"
+    }
+    document.querySelector(".aud").addEventListener("click", aud);
+    function aud() {
+        window.location.href = "audio.html"
+    }
 
 </script>

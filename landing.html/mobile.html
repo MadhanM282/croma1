@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mobiles</title>
+
+    <link rel="stylesheet" re>
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* body{
+            background-color: black;
+        }
+        .mobile{
+            width: 50%;
+            margin-left: 600px;
+            background-color: black;
+
+        }
+        h1{
+            color: white;
+        }
+       .image{
+           width: 35%;
+           padding: 30px;
+       }
+       .mobile>div{
+           border: 1px solid rgb(46,46,46);
+           border-width: 0.2px;
+           border-right-style: none;
+           width: 90%;
+           margin-left: 30px;
+           padding:20px;
+       } */
+    </style>
+
+</head>
+<body>
+    <header>
+        <!-- this is pin box -->
+        <div class="pin-box">
+            <i id="map" class="fas fa-map-marker-alt"></i>
+            <span>PINCODE</span>
+            <!-- <input type="number" value="274301"> -->
+            <span>
+                <p>274301</p>
+            </span>
+            <i id="pencil" class="fas fa-pencil-alt"></i>
+    
+        </div>
+        <!-- this is pin box -->
+    
+    </header>
+    
+    
+    
+    <!-- this is main div -->
+    <main-nav>
+        <div class="main-nav">
+    
+            <div class="logo">
+    
+                <img class="croma" onclick="croma()"
+                    src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://www.croma.com/assets/images/croma_logo_dark.png/mxw_192,f_auto"
+                    alt="Croma Logo">
+    
+            </div>
+            <div class="menu">
+                <button onclick="myFunction()" class="dropbtn"> 
+                    <i class="fas fa-bars"></i>  
+                           Menu     
+                </button>
+                <div id="myDropdown" class="dropdown-content" >
+                    <h4>SELECT BY CATEGORY</h4>
+                    <p>Television & Accessories</p>
+                    <p>Home Appliances</p>
+                    <p>Phones and wearables</p>
+                    <p>Kitchen Appliances</p>
+                    <p>Audio & Video</p>
+                    <p>Health & Fitness</p>
+                    <p>Grooming & Personal care</p>
+                    <p>Camera & Accessories</p>
+                    <p>Smart Devices</p>
+                    <p>Gaming</p>
+                    <p>Accessories</p>
+                    <p>Top Brands</p>
+                 </div>
+
+            </div>
+    
+            <div class="search-box">
+                <div class="input-div">
+                    <input id="inp" type="text" placeholder="What are you looking for ?" />
+                </div>
+                <div class="search-btn">
+                    <button type="submit" id="search" onclick="press()"><i class="fa fa-search"></i></button>
+    
+                </div>
+
+    
+            </div>
+    
+            <div class="orders">
+                <p>ORDERS</p>
+            </div>
+    
+            <div class="my-account">
+                <p>MY ACCOUNT<i class="fas fa-angle-down"></i></p>
+    
+            </div>
+    
+            <div class="cart">
+                <p><i class="fas fa-shopping-cart"></i>CART</p>
+                <div class="cart-count">
+                    <!-- <p>5</p> -->
+                </div>
+            </div>
+    
+    
+        </div>
+    </main-nav>
+    <hr>
+    <div class="mobile">
+        <h1>Results for "Mobile"</h1>
+
+        <!-- div
+                <img>
+                <div>
+                    name
+                    id
+                    price
+                </div>
+            div -->
+    </div>
+</body>
+</html>
+
+<script>
+    var mobiles = [
+    {
+        name :"Apple iPhone 11 (64GB ROM, 4GB RAM, MHDF3HN/A, Purple)",
+        img:"https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1605262065/Croma%20Assets/Communication/Mobiles/Images/9001728409630.png/mxw_1440,f_auto",
+        id:"PRODUCT ID: 230110",
+        price:"₹49,900.00 ",
+        category:"mobile"
+    },
+    {
+        name :"Apple iPhone 12 (64GB ROM, 4GB RAM, MGJ63HN/A, White)",
+        img:"https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1605272155/Croma%20Assets/Communication/Mobiles/Images/8999513391134.png/mxw_1440,f_auto",
+        id:"PRODUCT ID: 229920",
+        price:"₹63,900.00 "
+    },
+    {
+        name :"Apple iPhone 12 (128GB ROM, 4GB RAM, MGJE3HN/A, Blue)",
+        img:"https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1605269941/Croma%20Assets/Communication/Mobiles/Images/8999510638622.png/mxw_1440,f_auto",
+        id:"PRODUCT ID: 229927",
+        price:"₹68,900.00"
+    },
+    {
+        name :"OnePlus 9R (128GB ROM, 8GB RAM, LE2101, Lake Blue)",
+        img:"https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1638446751/Croma%20Assets/Communication/Mobiles/Images/233912_biu7qr.png/mxw_2048,f_auto",
+        id:"Product Id: 233912",
+        price:"₹39,999.00"
+    }
+];
+
+var mobile=[];
+mobiles.map(function (ele) {
+
+    var obj={
+        image:ele.img,
+        name:ele.name,
+        id:ele.id,
+        price:ele.price
+    }
+    mobile.push(obj);
+    // var sma         lld                           i v = d  o  c  u  m  e  n  t  .c   r  e   a   t   e   E   l   e   m en  t  ("  di  v");
+    //   va r b ox = document.createElement("div");
+
+    // var compare = document.createElemet("h3");
+
+    // compare.textContent = "COMPARE  ";
+    // var store = document.createElement("h3").textContent = "CONNECT TO STORE";
+    // store.textContent = "CONNECT TO STORE"
+    // var box = document.createElement("div");
+    // var smalldiv = document.createElement("div");
+    // smalldiv.append(box,compare,store)
+
+    var img=document.createElement("img");
+    img.setAttribute("src",ele.img);
+    img.setAttribute("class",'image');
+
+    var div1=document.createElement('div');
+    div1.style.marginBottom="80px";
+    
+    var div2=document.createElement('div');
+    div2.style.display="flex";
+
+    var name=document.createElement('h2');
+    name.textContent=ele.name;
+    name.style.color="white";
+
+    var prod_id=document.createElement('p');
+    prod_id.textContent=ele.id;
+    prod_id.style.color="white";
+
+    var price=document.createElement('h2');
+    price.textContent=ele.price;
+    price.style.color="white";
+
+
+    div1.append(name,           prod_id,price);
+    div2.append(img,div1);
+    document.querySelector(".mobile").append(div2);
+
+//    localStorage.setItem(JSON.stringify(''))
+    localStorage.setItem("mobile",JSON.stringify(mobile))
+    
+})
+</script>
+<script>
+    document.querySelector("#search").addEventListener("click", press);
+    function press() {
+        var val = document.querySelector("#inp").value;
+        if (val === "laptop") {
+
+            window.location.href = "laptop.html"
+        }
+
+        if (val === "teliviion" || "tv") {
+            window.location.href = "tv.html"
+        }
+        if (val === "audio") {
+            window.location.href = "audio.html"
+        }
+        
+        console.log(val);
+
+    }
+        </script>
+        <script>
+            document.querySelector(".croma").addEventListener("click", function croma() {
+                window.location.href = 'home.html'
+            });
+        </script>
+        <script>
+            window.onscroll = function () { myFunction() };
+            var navbar = document.querySelector(".main-nav");
+            var sticky = navbar.offsetTop;
+
+            function myFunction() {
+                if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("sticky");
+
+                }
+        else {
+            navbar.classList.remove("sticky");
+        }
+    }
+</script>
+<script src="menu.js"></script>
+
+
