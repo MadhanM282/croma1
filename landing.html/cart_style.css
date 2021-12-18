@@ -713,7 +713,7 @@ body{
  justify-content: space-evenly;
 
 }
-img{
+.cart_data>div>img{
  width:180px;
  height:180px;   
 }

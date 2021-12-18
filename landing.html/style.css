@@ -549,7 +549,7 @@ h2{
     margin-top: 45px;
 }
 .image{
-   width: 40%;
+   width: 30%;
    padding: 60px;
 }
 .mobile>div{
@@ -585,7 +585,7 @@ h2{
     margin-top: 45px;
 }
 .image{
-   width: 30%;
+   width: 38%;
    padding: 60px;
 }
 .laptop>div{
@@ -603,13 +603,14 @@ h2{
 
 /* this is for the audio part */
 
-body{
+/* body{
     background-color: black;
-    }
+    } */
 .audio{
     width: 80%;
     margin-left: 270px;
     background-color: black;
+    /* border: 1px solid red; */
 
 }
 h1{
@@ -619,8 +620,9 @@ h2{
     margin-top: 45px;
 }
 .image{
-   width: 30%;
-   padding: 60px;
+   width: 38%;
+   padding: 30px;
+   /* border: 1px solid red; */
 }
 .audio>div{
    border-bottom: 1px solid rgb(46,46,46);

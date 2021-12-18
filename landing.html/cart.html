@@ -38,6 +38,71 @@
     </style>
 </head>
 <body>
+    <header>
+        <!-- this is pin box -->
+        <div class="pin-box">
+            <i id="map" class="fas fa-map-marker-alt"></i>
+            <span>PINCODE</span>
+            <!-- <input type="number" value="274301"> -->
+            <span>
+                <p>274301</p>
+            </span>
+            <i id="pencil" class="fas fa-pencil-alt"></i>
+    
+        </div>
+        <!-- this is pin box -->
+    
+    </header>
+    
+    
+    
+    <!-- this is main div -->
+    <main-nav>
+        <div class="main-nav">
+    
+            <div class="logo">
+    
+                <img src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://www.croma.com/assets/images/croma_logo_dark.png/mxw_192,f_auto"
+                    alt="Croma Logo">
+    
+            </div>
+            <div class="menu">
+                <button>
+                    <i class="fas fa-bars"></i>
+                    Menu</button>
+            </div>
+    
+            <div class="search-box">
+                <div class="input-div">
+                    <input id="inp" type="text" placeholder="What are you looking for ?" />
+                </div>
+                <div class="search-btn">
+                    <button type="submit" id="search" onclick="press()"><i class="fa fa-search"></i></button>
+    
+                </div>
+    
+            </div>
+    
+            <div class="orders">
+                <p>ORDERS</p>
+            </div>
+    
+            <div class="my-account">
+                <p>MY ACCOUNT<i class="fas fa-angle-down"></i></p>
+    
+            </div>
+    
+            <div class="cart" id="cart_click">
+                <p><i class="fas fa-shopping-cart"></i>CART</p>
+                <div class="cart-count">
+                    <p></p>
+                </div>
+            </div>
+    
+    
+        </div>
+    </main-nav>
+    <!-- cart body -->
     <div class="cart_data">
 
         <!-- div
@@ -63,7 +128,7 @@
 </html>
 <script>
     var cart=JSON.parse(localStorage.getItem("cartItem")) || [];
-    // display(cart);
+    //display(cart);
 
     if(cart.length==0){
         var div=document.createElement('div');
