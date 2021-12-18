@@ -313,25 +313,25 @@
     var audio = [
     {
         name:"Apple Airpods Pro In-Ear Active Noise Cancellation Truly Wireless Earbuds with Mic (Bluetooth 5.0, with Wireless Charging Case, MWP22HN/A, White)",
-        image:"https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1605170750/Croma%20Assets/Entertainment/Headphones%20and%20Earphones/Images/8937376841758.png/mxw_1125,f_auto",
+        img:"https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1605170750/Croma%20Assets/Entertainment/Headphones%20and%20Earphones/Images/8937376841758.png/mxw_1125,f_auto",
         id:"PRODUCT ID: 222222",
         price:"₹20,900.00"
     },
      {
         name:"Boat Stone 5 Watts Portable Bluetooth Speaker (Stereo Channel, 193, Red)",
-        image:"https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1606073981/Croma%20Assets/Entertainment/Speakers%20and%20Media%20Players/Images/8975798992926.png/mxw_1125,f_auto",
+        img:"https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1606073981/Croma%20Assets/Entertainment/Speakers%20and%20Media%20Players/Images/8975798992926.png/mxw_1125,f_auto",
         id:"PRODUCT ID: 225910",
         price:"₹899.00"
     },
      {
         name:"OnePlus Bullets Wireless Z Bass Edition In-Ear Wireless Earphone with Mic (Bluetooth 5.0, Quick Switch, 5481100067, Bold Black)",
-        image:"https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1637933045/Croma%20Assets/Entertainment/Headphones%20and%20Earphones/Images/242300_pnmjdi.png/mxw_1125,f_auto",
+        img:"https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1637933045/Croma%20Assets/Entertainment/Headphones%20and%20Earphones/Images/242300_pnmjdi.png/mxw_1125,f_auto",
         id:"PRODUCT ID: 242300",
         price:"₹1,999.00"
     },
      {
         name:"Philips On-Ear Noise Isolation Wireless Headphone with Mic (Bluetooth 5.0, Bass Boost Button, TAH4205BK/00, Black)",
-        image:"https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1633977153/Croma%20Assets/Entertainment/Headphones%20and%20Earphones/Images/242883_czv27v.png/mxw_1125,f_auto",
+        img:"https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1633977153/Croma%20Assets/Entertainment/Headphones%20and%20Earphones/Images/242883_czv27v.png/mxw_1125,f_auto",
         id:"PRODUCT ID: 242883",
         price:"₹1,799.00"
     }
@@ -347,54 +347,57 @@ audio.map(function(ele){
         price:ele.price
     }
     audios.push(obj);
+    console.log(ele.image);
 
-    var img=document.createElement("img");
-    img.setAttribute("src",ele.image);
-    img.setAttribute("class",'image');
-    var div1=document.createElement('div');
-    div1.style.marginBottom="80px";
-    // var hr=document.createElement('hr');
-    // hr.append(div1);
-    var div2=document.createElement('div');
-    div2.style.display="flex";
-    var name=document.createElement('h2');
-    name.textContent=ele.name;
-    name.style.color="white";
-    var prod_id=document.createElement('p');
-    prod_id.textContent=ele.id;
-    prod_id.style.color="white";
-    var price=document.createElement('h2');
-    price.textContent=ele.price;
-    price.style.color="white";
+    var img = document.createElement("img");
+    img.setAttribute("src", ele.img);
+    img.setAttribute("class", 'image');
 
+    var div1 = document.createElement('div');
+    div1.style.marginBottom = "80px";
 
+    var div2 = document.createElement('div');
+    div2.style.display = "flex";
 
+    var name = document.createElement('h2');
+    name.textContent = ele.name;
+    name.style.color = "white";
 
-    var add_cart=document.createElement("button");
-    
-    add_cart.setAttribute("class","add_to_cart");
-    add_cart.setAttribute("id","cart");
+    var prod_id = document.createElement('p');
+    prod_id.textContent = ele.id;
+    prod_id.style.color = "white";
 
-    add_cart.textContent="ADD TO CART";
+    var price = document.createElement('h2');
+    price.textContent = ele.price;
+    price.style.color = "white";
 
 
-    add_cart.addEventListener("click",function(){
+
+
+    var add_cart = document.createElement("button");
+
+    add_cart.setAttribute("class", "add_to_cart");
+    add_cart.setAttribute("id", "cart");
+
+    add_cart.textContent = "ADD TO CART";
+
+
+    add_cart.addEventListener("click", function () {
 
         // console.log(ele);
         alert("Your Item is added on cart")
-         addCart(ele);
+        addCart(ele);
 
     });
 
 
-    var buy_now=document.createElement("button");
-    buy_now.textContent="BUY NOW";
-    buy_now.setAttribute("class","buy_now");
-    buy_now.setAttribute('id',"buy");
+    var buy_now = document.createElement("button");
+    buy_now.textContent = "BUY NOW";
+    buy_now.setAttribute("class", "buy_now");
+    buy_now.setAttribute('id', "buy");
 
-
-    buy_now.addEventListener("click",function(){
-        window.location.href="cart.html";
+    buy_now.addEventListener("click", function () {
+        window.location.href = "cart.html";
     })
 
 
@@ -402,6 +405,7 @@ audio.map(function(ele){
     div1.append(name,prod_id,price,buy_now,add_cart);
     div2.append(img,div1);
     document.querySelector(".audio").append(div2);
+
 //    localStorage.setItem(JSON.stringify(''))
     localStorage.setItem("cartItem",JSON.stringify(cart))
 

@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="cart_style.css">
+    <!-- <link rel="stylesheet" href="cart_style.css"> -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    <style>
         .cart_data>div{
-            border:1px solid white;
+            border-bottom:1px solid white;
             width: 80%;
             margin-left: 100px;
         }
@@ -31,10 +31,118 @@
             width: 300px;
             padding: 0px
         } */
-        .image{
+        /* .image{
             border: 1px solid red;
 
-        }
+        } */
+        /* footer */
+        .container{
+    display: flex;
+    background-color:#1d1d1d;
+    height: 500px;
+    width: 100%;
+    font-family: 'Gotham-bold',sans-serif;
+
+}
+.incontainer1{
+    color: white;
+}
+.incontainer1{
+    width: 33%;
+    text-align: left;
+    padding-left: 150px;
+    margin-top:10px;
+}
+.incontainer2{
+    width: 1px;
+    height: 80%;
+    background-color: white;
+    margin-top: 50px;
+}
+.incontainer3{
+    width: 33%;
+    display: flex;
+    
+}
+.incontainer4{
+    width: 1px;
+    height: 80%;
+    background-color: white;
+    margin-top: 50px;
+}
+.incontainer5{
+    width: 33%;
+    display: flex;
+}
+#innerdiv1>p{
+   margin-left: 25px;
+   line-height: 40px;
+}
+#innerdiv2>p{
+   margin-left: 15px;
+   line-height: 40px;
+}
+#internal1>p{
+   margin-left: 25px;
+   line-height: 40px;
+}
+#internal2>p{
+   margin-left: 20px;
+   line-height: 40px;
+  
+}
+
+body{
+    background-color:black;
+}
+p{
+   color: white;
+   font-size: 15px;
+   font-weight: bold;
+}
+#email{
+   color: white;
+   height: 50px;
+   border-radius: 8px;
+   width: 280px;
+}
+#copyright:before {
+   content: ' \00A9';
+} 
+#icon{
+   margin-left: 10px;
+}
+#fb{
+  margin-left: 25px;
+}
+#insta{
+   margin-left: 25px;
+}
+#in{
+   margin-left: 25px;
+}
+#tweet{
+   margin-left: 25px;
+}
+#aboutcroma{
+   margin-top: 30px;
+}
+#sitemap{
+   margin-top: 30px;
+}
+#tele{
+   margin-top: 40px;
+}
+#audio1{
+   margin-top: 80px;
+}
+#out{
+   position: relative;
+}
+
+#cart_click{
+    cursor: pointer;
+}
     </style>
 </head>
 <body>
@@ -240,10 +348,9 @@
     price.textContent=ele.price;
     price.style.color="white";
 
-
     var del=document.createElement('button');
     del.textContent="Delete";
-4
+
     del.addEventListener("click",function(index){
         var cart=JSON.parse(localStorage.getItem("cartItem"))
         cart.splice(index,1);
