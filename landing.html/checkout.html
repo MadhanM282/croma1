@@ -133,7 +133,7 @@ p{
    position: relative;
 }
 .check_out_body{
-    border:1px solid white;
+    /* border:1px solid white; */
     height: 600px;
     color: white;
 
@@ -211,30 +211,104 @@ p{
     font-size: 20px;
     color: rgb(211, 209, 209);
     margin-top: 10px;
+    text-decoration: underline;
     /* border: 1px solid red; */
 }
 .check_img{
     height: 100px;
     width: 80%;
-    margin: auto;
+    /* margin: auto; */
     display: flex;
+
     /* border: 1px solid red; */
 }
 .check_img>div>img{
     width: 100px;
+
 }
 .total_price{
     margin: auto;
     display: flex;
+    margin-top: 10px;
+    padding: 0px 5px;
     /* border: 1px solid red; */
     text-align: center;
     justify-content: space-between;
 }
 
+.deliver{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 0px 5px;
+}
+.dash{
+    width: fit-content;
+    color: rgb(66, 66, 66);
+    margin: auto;
+}
+.final_total{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 0px 5px;
+}
 
+.check_out>button{
+    padding: 10px 40px;
+    border-radius: 10px;
+    margin-top: 20px;
+    border: 0px;
+    margin-left: 25%;
+    background: turquoise;
+}
+.check_out>button:hover{
+    background: darkturquoise;
+    cursor: pointer;
+}
+.check_dis>div{
+    margin-left: 10px;
+    font-size: 15px;
+}
+.check_dis>div:nth-child(2){
+    margin-left: 10px;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.check_dis>div:nth-child(3){
+    margin-left: 10px;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.adress>button{
+    width: 50%;
+    margin-top: 20px;
+    background: transparent;
+    color:white;
+    padding: 10px 0px;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+.adress{
+    display: flex;
+}
 
+.adress>button:hover{
+    color: turquoise;
+    border: 1px solid turquoise;
+    cursor: pointer;
+}
 
+.bottom_tag{
+    /* border: 1px solid red; */
+    margin-top: 30px;
+    width: 20% ;
+    margin-left: 913px;
+}
+.bottom_tag>p{
+    color: rgb(170, 169, 169);
 
+}
 
 
 
@@ -332,16 +406,44 @@ p{
                     <div class="check_img" >
 
                     </div>
+                    <div class="check_dis">
+                        
+                        <div>
+                            <i class="fas fa-truck"></i>
+                            Will be delivered by 18th December 2021
+                        </div>
+                        <div>
+                            <h3>Mohan</h3>
+                        </div>
+                        <div>
+                            <h3>RAJUPETA, NEAR RAMALAYAM, ANAKAPALLE, ANDHRA PRADESH - 531033</h3>
+                        </div>
+                        <div class="adress">
+                            <button>ADD ADRESS</button>
+                            <button>PICK ANOTHER ADRESS</button>
+                        </div>
+                    </div>
                 
                 </div>
                 <div class="check_out">
                     <p>Payment details</p>
                     <div class="total_price" ></div>
 
-                    <div></div>
+                    <div class="deliver">
+                        <h3>Delivery charges</h3>
+                        <h3>Free</h3>
+                    </div>
+                    <br>
+                    <div class="dash">_____________________________</div>
+                    <div class="final_total"></div>
+                    <br>
+                    <button>Payment</button>
                 </div>
 
             </div>
+        </div>
+        <div class="bottom_tag">
+            <p>EMI options including NO COST EMI can be selected at payment options</p>
         </div>
 
 
@@ -416,11 +518,17 @@ p{
         total = +(total);
         console.log(typeof (total));
         var h3 = document.createElement("h3");
-        h3.textContent = "Total Price";
+        h3.textContent = "Sub-Total";
+
+        var h = document.createElement("h3");
+            h.textContent = "Total Price";
+        
 
 
 
         document.querySelector(".total_price").append(h3,total);
+        document.querySelector(".final_total").append(h, total);
+        
 
 
         cart.map(function (ele) {

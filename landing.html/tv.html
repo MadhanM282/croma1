@@ -329,25 +329,25 @@ p{
     var tv = [
     {
         name:"Sony Bravia X75 Series 108cm (43 Inch) Ultra HD 4K LED Android Smart TV (Dolby Audio & Alexa Compatibility, KD-43X75, Black)",
-        image:"https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1639116597/Croma%20Assets/Entertainment/Television/Images/234281_xhvfqz.png/mxw_1125,f_auto",
+        img:"https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1639116597/Croma%20Assets/Entertainment/Television/Images/234281_xhvfqz.png/mxw_1125,f_auto",
         id:"PRODUCT ID: 234281",
         price:"₹56,800.00"
     },
     {
         name:"Kodak 7XPRO Series 80cm (32 Inch) HD Ready Flat Panel Android Smart TV (Digital Noise Filter, 32HDX7XPRO, Black)",
-        image:"https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1639037755/Croma%20Assets/Entertainment/Television/Images/246056_a89my8.png/mxw_1125,f_auto",
+        img:"https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1639037755/Croma%20Assets/Entertainment/Television/Images/246056_a89my8.png/mxw_1125,f_auto",
         id:"PRODUCT ID: 246056",
         price:"₹15,490.00"
     },
      {
         name:"Treeview Classic 80cm (31.5 Inches) HD Ready Flat Panel Standard TV (Multiple Picture Mode, IND3201AT, Black)",
-        image:"https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1637827938/Croma%20Assets/Entertainment/Television/Images/245646_ixdral.png/mxw_1125,f_auto",
+        img:"https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1637827938/Croma%20Assets/Entertainment/Television/Images/245646_ixdral.png/mxw_1125,f_auto",
         id:"PRODUCT ID: 245646",
         price:"₹11,490.00"
     },
      {
         name:"Sony Bravia X85J Series 139cm (55 Inch) Ultra HD 4K LED Google Smart TV (Dolby Vision Atmos & Alexa Compatibility, KD-55X85J, Black)",
-        image:"https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1639116591/Croma%20Assets/Entertainment/Television/Images/237753_gjtdux.png/mxw_1125,f_auto",
+        img:"https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1639116591/Croma%20Assets/Entertainment/Television/Images/237753_gjtdux.png/mxw_1125,f_auto",
         id:"PRODUCT ID: 237753",
         price:"₹104,490.00"
     }
@@ -359,7 +359,7 @@ var cart=JSON.parse(localStorage.getItem("cartItem")) || [];
 
 tv.map(function(ele){
     var obj={
-        image:ele.image,
+        image:ele.img,
         name:ele.name,
         id:ele.id,
         price:ele.price
@@ -367,7 +367,7 @@ tv.map(function(ele){
     tvs.push(obj);
 
     var img=document.createElement("img");
-    img.setAttribute("src",ele.image);
+    img.setAttribute("src",ele.img);
     img.setAttribute("class",'image');
     var div1=document.createElement('div');
     div1.style.marginBottom="80px";
