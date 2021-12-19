@@ -217,7 +217,18 @@ p{
     height: 100px;
     width: 80%;
     margin: auto;
-    border: 1px solid red;
+    display: flex;
+    /* border: 1px solid red; */
+}
+.check_img>div>img{
+    width: 100px;
+}
+.total_price{
+    margin: auto;
+    display: flex;
+    /* border: 1px solid red; */
+    text-align: center;
+    justify-content: space-between;
 }
 
 
@@ -325,6 +336,8 @@ p{
                 </div>
                 <div class="check_out">
                     <p>Payment details</p>
+                    <div class="total_price" ></div>
+
                     <div></div>
                 </div>
 
@@ -396,23 +409,28 @@ p{
 
 </body>
 </html>
+
 <script>
-    window.onscroll = function () { myFunction() };
-        var navbar = document.querySelector(".main-nav");
-        var sticky = navbar.offsetTop;
-
-        function myFunction() {
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky");
-
-            }
-            else {
-                navbar.classList.remove("sticky");
-            }
-        }
+    var cart = JSON.parse(localStorage.getItem("cartItem")) || [];
+        var total = localStorage.getItem("Total_price");
+        total = +(total);
+        console.log(typeof (total));
+        var h3 = document.createElement("h3");
+        h3.textContent = "Total Price";
 
 
-        var slideIndex = 0;
-        showSlides();
 
+        document.querySelector(".total_price").append(h3,total);
+
+
+        cart.map(function (ele) {
+            var div = document.createElement('div');
+
+            var img = document.createElement('img');
+            img.setAttribute("src", ele.img);
+
+            div.append(img);
+            document.querySelector(".check_img").append(div)
+
+        })
 </script>

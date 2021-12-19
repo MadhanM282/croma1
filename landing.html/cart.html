@@ -438,6 +438,7 @@ p{
         var cart=JSON.parse(localStorage.getItem("cartItem"))
         cart.splice(index,1);
         localStorage.setItem("cartItem",JSON.stringify(cart))
+        
         alert("Your items is delete succesfully");
 
     })
@@ -449,7 +450,7 @@ p{
         })
 
     }
-
+    localStorage.setItem("Total_price", JSON.stringify(total));
 
 </script>
 <script>
@@ -463,6 +464,8 @@ p{
         })
         document.querySelector("#total_cart").append(head1, checkout);
 
+
+        
 
 
 
