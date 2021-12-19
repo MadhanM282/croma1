@@ -7,10 +7,27 @@
     <title>Document</title>
     <!-- <link rel="stylesheet" href="cart_style.css"> -->
     <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/d7bc18a32d.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    <style>
-       .cart_data{
+       #total_cart{
            margin-bottom: 50px;
+           width: 50%;
+           height: 100px;
+           margin: auto;
+           margin-top: 30px;
+           border: 1px solid rgb(77, 76, 76);
+           border-radius: 10px;
+           text-align: center;
+           align-items: center;
+           padding-top: 30px;
+       }
+       #total_cart>h1{
+           align-items: center;
+       }
+       .cart_data{
+           margin-bottom: 30px;
        }
         .cart_data>div{
             border-bottom:1px solid white;
@@ -63,8 +80,9 @@
 .incontainer1{
     width: 33%;
     text-align: left;
-    padding-left: 150px;
-    margin-top:10px;
+    padding-left: 100px;
+    margin-top:100px;
+    margin-right: 40px;
 }
 .incontainer2{
     width: 1px;
@@ -75,6 +93,7 @@
 .incontainer3{
     width: 33%;
     display: flex;
+    margin-top:90px;
     
 }
 .incontainer4{
@@ -86,10 +105,20 @@
 .incontainer5{
     width: 33%;
     display: flex;
+    margin-top:100px;
+}
+#innerdiv1{
+    padding-left: 20px;
 }
 #innerdiv1>p{
    margin-left: 25px;
    line-height: 40px;
+}
+.incontainer1>input{
+    margin-top: 30px;
+}
+#innerdiv2{
+    padding-left: 50px;
 }
 #innerdiv2>p{
    margin-left: 15px;
@@ -104,6 +133,13 @@
    line-height: 40px;
   
 }
+#internal1{
+    padding-left: 20px;
+}
+#internal2{
+    padding-left: 50px;
+}
+
 
 body{
     background-color:black;
@@ -230,9 +266,10 @@ p{
     </main-nav>
     <!-- cart body -->
     <!-- top box -->
-    <div id="topbox">
-
-    </div>
+    <div id="total_cart">
+    
+    
+    </div>>
     <div class="cart_data">
 
         <!-- div
@@ -318,6 +355,7 @@ p{
 <script>
     var cart=JSON.parse(localStorage.getItem("cartItem")) || [];
     //display(cart);
+    var total = 0;
 
     if(cart.length==0){
         var div=document.createElement('div');
@@ -370,6 +408,29 @@ p{
     price.textContent=ele.price;
     price.style.color="white";
 
+    // adding the total price
+
+            var rs = ele.price;
+            rs = rs.split("");
+            for (var i = 0; i < rs.length; i++) {
+                if (rs[i] == '₹') {
+                    rs.splice(i, 1);
+                }
+                if (rs[i] == ',') {
+                    rs.splice(i, 1);
+                }
+                if (rs[i] == '.') {
+                    console.log("In the break", rs[i]);
+                    rs.splice(i, 3);
+                    break;
+                }
+            }
+            rs = rs.join("")
+            rs = +(rs);
+            total = total + rs;
+
+            console.log(typeof (rs), rs, total);
+
     var del=document.createElement('button');
     del.textContent="Delete";
 
@@ -382,36 +443,19 @@ p{
     })
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     div1.append(name,prod_id,price,del);
     div2.append(img,div1);
     document.querySelector(".cart_data").append(div2);
         })
 
-
-     
-
-
-
     }
-
 
 
 </script>
 <script>
- 
+    var head1 = document.createElement('h1');
+    head1.textContent = `Your cart total is Rs. ${total}`
+    document.querySelector("#total_cart").append(head1);
 
 
 </script>
