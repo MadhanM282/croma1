@@ -1,0 +1,124 @@
+#container{
+    display: flex;
+    background-color:#1d1d1d;
+    height: 500px;
+    width: 100%;
+    font-family: 'Gotham-bold',sans-serif;
+
+}
+.incontainer1{
+    color: white;
+}
+.incontainer1{
+    width: 33%;
+    text-align: left;
+    padding-left: 150px;
+    margin-top:100px;
+    margin-right: 40px;
+}
+.incontainer2{
+    width: 1px;
+    height: 80%;
+    background-color: white;
+    margin-top: 50px;
+}
+.incontainer3{
+    width: 33%;
+    display: flex;
+    margin-top:90px;
+
+    
+}
+.incontainer4{
+    width: 1px;
+    height: 80%;
+    background-color: white;
+    margin-top: 50px;
+}
+.incontainer5{
+    width: 33%;
+    display: flex;
+    margin-top:100px;
+
+}
+
+#innerdiv1{
+    padding-left: 20px;
+}
+#innerdiv1>p{
+   margin-left: 25px;
+   line-height: 40px;
+}
+#innerdiv2{
+    padding-left: 50px;
+}
+#innerdiv2>p{
+   margin-left: 15px;
+   line-height: 40px;
+}
+#internal1>p{
+   margin-left: 25px;
+   line-height: 40px;
+}
+#internal2>p{
+   margin-left: 20px;
+   line-height: 40px;
+  
+}
+#internal1{
+    padding-left: 20px;
+}
+#internal2{
+    padding-left: 50px;
+}
+
+/* fotter */
+p{
+   color: white;
+   font-size: 15px;
+   font-weight: bold;
+}
+#email{
+   color: white;
+   height: 50px;
+   border-radius: 8px;
+   width: 280px;
+}
+#copyright:before {
+   content: ' \00A9';
+} 
+#icon{
+   margin-left: 10px;
+}
+#fb{
+  margin-left: 25px;
+}
+#insta{
+   margin-left: 25px;
+}
+#in{
+   margin-left: 25px;
+}
+#tweet{
+   margin-left: 25px;
+}
+#aboutcroma{
+   margin-top: 30px;
+}
+#sitemap{
+   margin-top: 30px;
+}
+#tele{
+   margin-top: 40px;
+}
+#audio1{
+   margin-top: 80px;
+}
+#out{
+   position: relative;
+}
+
+#cart_click{
+    cursor: pointer;
+}
+
