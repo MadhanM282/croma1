@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mob.css">
     <style>
         #options {
         width: 20%;
@@ -17,14 +18,14 @@
         transition: all .5s ease-in;
         display: inline-block;
         margin: 1%;
-        border: 1px solid red;
+        /* border: 1px solid red; */
     }
     .optopnal{
         display: flex;
-        border: 1px solid red;
+        /* border: 1px solid red; */
     }
     .mobile{
-        border: 1px solid red;
+        /* border: 1px solid red; */
     }
     </style>
 </head>
@@ -332,6 +333,7 @@
             add_cart.setAttribute("id","cart");
 
             add_cart.textContent="ADD TO CART";
+            add_cart.style.background = "turquoise"
 
 
             add_cart.addEventListener("click",function(){
@@ -349,6 +351,10 @@
             buy_now.textContent="BUY NOW";
             buy_now.setAttribute("class","buy_now");
             buy_now.setAttribute('id',"buy");
+            buy_now.style.background = "black"
+            buy_now.style.color = "white"
+
+
 
             buy_now.addEventListener("click",function(){
                 window.location.href = "cart.html";

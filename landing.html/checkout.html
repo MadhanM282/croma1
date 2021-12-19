@@ -151,7 +151,7 @@ p{
 }
 .line{
     margin-top: 10px;
-    color: yellowgreen;
+    color:turquoise;
 }
 
 .check1{
@@ -159,7 +159,7 @@ p{
     height: 50px;
     margin-left: 50px;
     border-radius: 50%;
-    background-color: green;
+    background-color:turquoise;
 }
 .check1>i{
     font-size: 50px;
@@ -437,7 +437,7 @@ p{
                     <div class="dash">_____________________________</div>
                     <div class="final_total"></div>
                     <br>
-                    <button>Payment</button>
+                    <button id="payment">Payment</button>
                 </div>
 
             </div>
@@ -541,4 +541,10 @@ p{
             document.querySelector(".check_img").append(div)
 
         })
+</script>
+<script>
+    document.querySelector("#payment").addEventListener("click",payment);
+    function payment(){
+        window.location.href = "payment.html"
+    }
 </script>
