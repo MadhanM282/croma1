@@ -438,7 +438,7 @@ p{
         var cart=JSON.parse(localStorage.getItem("cartItem"))
         cart.splice(index,1);
         localStorage.setItem("cartItem",JSON.stringify(cart))
-        
+
         alert("Your items is delete succesfully");
 
     })
@@ -455,7 +455,7 @@ p{
 </script>
 <script>
     var head1 = document.createElement('h1');
-        head1.textContent = `Your cart total is ${total}`
+        head1.textContent = `Your cart total is ₹ ${total}`
 
         var checkout = document.createElement("button");
         checkout.textContent = "Checkout";
