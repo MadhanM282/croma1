@@ -454,8 +454,17 @@ p{
 </script>
 <script>
     var head1 = document.createElement('h1');
-    head1.textContent = `Your cart total is Rs. ${total}`
-    document.querySelector("#total_cart").append(head1);
+        head1.textContent = `Your cart total is ${total}`
+
+        var checkout = document.createElement("button");
+        checkout.textContent = "Checkout";
+        checkout.addEventListener("click", function () {
+            window.location.href = "checkout.html";
+        })
+        document.querySelector("#total_cart").append(head1, checkout);
+
+
+
 
 
 </script>
