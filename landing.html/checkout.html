@@ -135,14 +135,94 @@ p{
 .check_out_body{
     border:1px solid white;
     height: 600px;
+    color: white;
+
+
+}
+.dots{
+    width: 30%;
+    /* border: 1px solid red; */
+    display: flex;
+    color: white;
+    margin-left: 200px;
+    margin-top: 50px;
+    
+    
+}
+.line{
+    margin-top: 10px;
+    color: yellowgreen;
 }
 
 .check1{
-    width: 10px;
-    height: 10px;
+    width: 50px;
+    height: 50px;
+    margin-left: 50px;
     border-radius: 50%;
-    background-color: turquoise;
+    background-color: green;
 }
+.check1>i{
+    font-size: 50px;
+}
+.check2{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+}
+.check2>i{
+    font-size: 50px;
+}
+
+#check_contenr{
+    height: 300px;
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    
+}
+.infoe{
+    display: flex;
+    height: 280px;
+}
+#ship{
+    font-size: 25px;
+    padding-bottom: 30px;
+    color: rgb(211, 209, 209);
+}
+.check_info{
+    width: 70%;
+    border-radius: 10px;
+    height: 90%;
+    margin-top: 5px;
+    border:1px solid rgb(116, 114, 114);
+}
+.check_out{
+    width: 25%;
+    border-radius: 10px;
+    height: 90%;
+    margin-top: 5px;
+    border:1px solid rgb(116, 114, 114);
+    margin-left:20px ;
+}
+.check_out>p{
+    text-align: center;
+    font-weight: 100;
+    font-size: 20px;
+    color: rgb(211, 209, 209);
+    margin-top: 10px;
+    /* border: 1px solid red; */
+}
+
+
+
+
+
+
+
+
+
+
     </style>
 </head>
 <body>
@@ -212,13 +292,36 @@ p{
     </main-nav>
     <!-- end of nav -->
     <div class="check_out_body" >
-        <div>
+        <div class="dots">
             <div class="check1">
+                <i class="fas fa-check-circle"></i>
+                
+            </div>
+            <div class="line">_____________________________</div>
+            
+            <div class="check2">
+                <i class="far fa-check-circle"></i>
+            </div>
+        </div>
+<!-- end -->
+
+        <!-- checkout info -->
+        <div id="check_contenr">
+            <div id="ship">
+                Shipping information
+            </div>
+            <div class="infoe">
+                <div class="check_info">
+                
+                </div>
+                <div class="check_out">
+                    <p>Payment details</p>
+                    <div></div>
+                </div>
 
             </div>
-            <hr>
-            <div class="check2"></div>
         </div>
+
 
 
     </div>
