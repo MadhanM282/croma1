@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #options {
+        width: 20%;
+        box-shadow: 0 0 8px 4px hsl(0deg 0% 78% / 21%);
+        padding: 1.5rem;
+        position: relative;
+        background:black;
+        color: white;
+        transition: all .5s ease-in;
+        display: inline-block;
+        margin: 1%;
+        /* border: 1px solid red; */
+    }
+    .optopnal{
+        display: flex;
+        /* border: 1px solid red; */
+    }
+    .mobile{
+        /* border: 1px solid red; */
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- this is pin box -->
+        <div class="pin-box">
+            <i id="map" class="fas fa-map-marker-alt"></i>
+            <span>PINCODE</span>
+            <!-- <input type="number" value="274301"> -->
+            <span>
+                <p>274301</p>
+            </span>
+            <i id="pencil" class="fas fa-pencil-alt"></i>
+    
+        </div>
+        <!-- this is pin box -->
+    
+    </header>
+    
+    
+    
+    <!-- this is main div -->
+    <main-nav>
+        <div class="main-nav">
+    
+            <div class="logo">
+    
+                <img class="croma" onclick="croma()"
+                    src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://www.croma.com/assets/images/croma_logo_dark.png/mxw_192,f_auto"
+                    alt="Croma Logo">
+    
+            </div>
+            <div class="menu">
+                <button onclick="myFunction()" class="dropbtn">
+                    <i class="fas fa-bars"></i>
+                    Menu
+                </button>
+                <div id="myDropdown" class="dropdown-content">
+                    <h4>SELECT BY CATEGORY</h4>
+                    <p>Television & Accessories</p>
+                    <p>Home Appliances</p>
+                    <p>Phones and wearables</p>
+                    <p>Kitchen Appliances</p>
+                    <p>Audio & Video</p>
+                    <p>Health & Fitness</p>
+                    <p>Grooming & Personal care</p>
+                    <p>Camera & Accessories</p>
+                    <p>Smart Devices</p>
+                    <p>Gaming</p>
+                    <p>Accessories</p>
+                    <p>Top Brands</p>
+                </div>
+    
+            </div>
+    
+            <div class="search-box">
+                <div class="input-div">
+                    <input id="inp" type="text" placeholder="What are you looking for ?" />
+                </div>
+                <div class="search-btn">
+                    <button type="submit" id="search" onclick="press()"><i class="fa fa-search"></i></button>
+    
+                </div>
+    
+    
+            </div>
+    
+            <div class="orders">
+                <p>ORDERS</p>
+            </div>
+    
+            <div class="my-account">
+                <p>MY ACCOUNT<i class="fas fa-angle-down"></i></p>
+    
+            </div>
+    
+            <div class="cart" id="cart_click">
+                <p><i class="fas fa-shopping-cart"></i>CART</p>
+                <div class="cart-count">
+                    <!-- <p>5</p> -->
+                </div>
+            </div>
+    
+    
+        </div>
+    </main-nav>
+    
+    <div class="optopnal">
+        <div id="options">
+        <label for="SORT">SORT BY</label><br />
+        
+        <select id="SORT" name='SORT' onchange="jsfunction(this.value)">
+            <option value="">---</option>
+            <option value="HighestFirst">Price (Highest First)</option>
+            <option value="LowestFirst">Price (Lowest First)</option>
+            <option value="DiscountDescending">Discount (Descending)</option>
+        </select>
+        <label>FILTER BY</label>
+        <hr />
+        <details>
+            <summary>Lifestyle</summary>
+            <div class="details-content">
+                <p class="details">Entertainment</p>
+                <p class="details">Everyday Use</p>
+                <p class="details">Gaming</p>
+            </div>
+        </details>
+        <hr />
+        <details>
+            <summary>OS Type</summary>
+            <div class="details-content">
+                <p class="details">Window OS</p>
+                <p class="details">Mac OS</p>
+                <p class="details">Android</p>
+            </div>
+        </details>
+        <hr />
+        <details>
+            <summary>Display Size (Inches)</summary>
+            <div class="details-content">
+                <p class="details">13 to 14.99</p>
+                <p class="details">15 to 16.99</p>
+            </div>
+        </details>
+        <hr />
+        <details>
+            <summary>RAM(GB)</summary>
+            <div class="details-content">
+                <p class="details">4</p>
+                <p class="details">6</p>
+                <p class="details">8</p>
+            </div>
+        </details>
+        <hr />
+        <details>
+            <summary>SSD Capacity</summary>
+            <div class="details-content">
+                <p class="details">0 - 512GB</p>
+                <p class="details">512GB-1TB</p>
+            </div>
+        </details>
+        <hr />
+        <details>
+            <summary>Colour Family</summary>
+            <div class="details-content">
+                <p class="details">Black</p>
+                <p class="details">Blue</p>
+                <p class="details">Silver</p>
+            </div>
+        </details>
+        <hr />
+        <details>
+            <summary>Weight (kgs)</summary>
+            <div class="details-content">
+                <p class="details">0.5 To 1</p>
+                <p class="details">1 To 1.5</p>
+                <p class="details">1.5 To 2</p>
+            </div>
+        </details>
+        <hr />
+        <details>
+            <summary>Country of Origin</summary>
+            <div class="details-content">
+                <p class="details">USA</p>
+                <p class="details">Taiwan</p>
+            </div>
+        </details>
+        <hr />
+        <details>
+            <summary>Store Availability</summary>
+            <div class="details-content">
+                <p class="details">Ambience Mall</p>
+                <p class="details">Ashram Road</p>
+                <p class="details">Belapur cbd</p>
+            </div>
+        </details>
+        <hr />
+        </div>
+        <div id="Results"></div>
+        <div class="mobile">
+            <h1>Results for "Mobile"</h1>
+        
+            <!-- div
+                                <img>
+                                <div>
+                                    name
+                                    id
+                                    price
+                                </div>
+                            div -->
+        </div>
+        </div>
+        
+        </div>
+        
+</body>
+</html>
+<script>
+    function jsfunction(value) {
+            if (value == 'HighestFirst') {
+                window.location.href="trail1.html";
+            }
+            if (value == 'LowestFirst') {
+                window.location.href="trail2.html"
+            }
+            if (value == 'DiscountDescending') {
+                PHL();
+            }
+        }
+
+        function PHL() {   // let arr = matched_products.sort((a, b) => b.New_Price - a.New_Price);
+         
+
+            window.lcation.href="trail1.html";
+        }
+
+        function PLH() {
+            let arr = matched_products.sort((a, b) => a.New_Price - b.New_Price);
+
+            window.lcation.href="trail1.html";
+        }
+
+        function DHL() {
+
+            let arr = matched_products.sort((a, b) => (((b.Old_Price - b.New_Price) / b.Old_Price) * 100) - (((a.Old_Price - a.New_Price) / a.Old_Price) * 100));
+
+            showserproducts(arr);
+        }
+</script>
+<script>
+    
+            var mobiles = [
+            {
+                name :"OnePlus 9R (128GB ROM, 8GB RAM, LE2101, Lake Blue)",
+            img:"https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1638446751/Croma%20Assets/Communication/Mobiles/Images/233912_biu7qr.png/mxw_2048,f_auto",
+            id:"Product Id: 233912",
+            price:"₹39,999.00"
+    },
+  
+            {
+                name :" Apple iPhone 11 (64GB ROM, 4GB RAM, MHDF3HN/A, Purple)",
+            img:"https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1605262065/Croma%20Assets/Communication/Mobiles/Images/9001728409630.png/mxw_1440,f_auto",
+            id:"PRODUCT ID: 230110",
+            price:"₹49,900.00 ",
+            category:"mobile"
+    },
+            {
+                name :"Apple iPhone 12 (64GB ROM, 4GB RAM, MGJ63HN/A, White)",
+            img:"https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1605272155/Croma%20Assets/Communication/Mobiles/Images/8999513391134.png/mxw_1440,f_auto",
+            id:"PRODUCT ID: 229920",
+            price:"₹63,900.00 "
+    },
+            {
+                name :"Apple iPhone 12 (128GB ROM, 4GB RAM, MGJE3HN/A, Blue)",
+            img:"https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1605269941/Croma%20Assets/Communication/Mobiles/Images/8999510638622.png/mxw_1440,f_auto",
+            id:"PRODUCT ID: 229927",
+            price:"₹68,900.00"
+    }
+          
+            ];
+
+            var mobile=[];
+            var cart=JSON.parse(localStorage.getItem("cartItem")) || [];
+            mobiles.map(function (ele) {
+
+    var obj={
+                image:ele.img,
+            name:ele.name,
+            id:ele.id,
+            price:ele.price
+    }
+            mobile.push(obj);
+
+
+            var img=document.createElement("img");
+            img.setAttribute("src",ele.img);
+            img.setAttribute("class",'image');
+
+            var div1=document.createElement('div');
+            div1.style.marginBottom="80px";
+
+            var div2=document.createElement('div');
+            div2.style.display="flex";
+
+            var name=document.createElement('h2');
+            name.textContent=ele.name;
+            name.style.color="white";
+
+            var prod_id=document.createElement('p');
+            prod_id.textContent=ele.id;
+            prod_id.style.color="white";
+
+            var price=document.createElement('h2');
+            price.textContent=ele.price;
+            price.style.color="white";
+
+
+
+
+
+
+            var add_cart=document.createElement("button");
+
+            add_cart.setAttribute("class","add_to_cart");
+            add_cart.setAttribute("id","cart");
+
+            add_cart.textContent="ADD TO CART";
+
+
+            add_cart.addEventListener("click",function(){
+
+                // console.log(ele);
+                alert("Your Item is added on cart")
+         addCart(ele);
+
+    });
+    
+
+
+
+            var buy_now=document.createElement("button");
+            buy_now.textContent="BUY NOW";
+            buy_now.setAttribute("class","buy_now");
+            buy_now.setAttribute('id',"buy");
+
+            buy_now.addEventListener("click",function(){
+                window.location.href = "cart.html";
+    })
+
+
+            div1.append(name,prod_id,price,buy_now,add_cart);
+            div2.append(img,div1);
+            document.querySelector(".mobile").append(div2);
+
+            //    localStorage.setItem(JSON.stringify(''))
+            localStorage.setItem("cartItem",JSON.stringify(cart))
+    
+})
+
+            function addCart(ele){
+                console.log(ele);
+            cart.push(ele);
+            localStorage.setItem("cartItem",JSON.stringify(cart));
+}
+    </script>
+<script>
+        document.querySelector("#search").addEventListener("click", press);
+        function press() {
+        var val = document.querySelector("#inp").value;
+        if (val === "laptop") {
+
+            window.location.href = "laptop.html"
+        }
+
+        if (val === "teliviion" || "tv") {
+            window.location.href = "tv.html"
+        }
+        if (val === "audio") {
+            window.location.href = "audio.html"
+        }
+
+        console.log(val);
+
+    }
+</script>
+<script>
+        document.querySelector(".croma").addEventListener("click", function croma() {
+            window.location.href = 'home.html'
+        });
+</script>
+<script>
+        window.onscroll = function () {myFunction()};
+        var navbar = document.querySelector(".main-nav");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+                if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky");
+
+                }
+        else {
+            navbar.classList.remove("sticky");
+        }
+    }
+</script>
+<script src="menu.js"></script>
+<script>
+        document.querySelector("#cart_click").addEventListener("click",function(){
+            console.log("Click on cart")
+       window.location.href="cart.html";
+
+    })
+
+
+
+</script>
+</script>

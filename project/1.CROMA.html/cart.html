@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="cart_style.css"> -->
+    <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/d7bc18a32d.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <style>
+       #total_cart{
+           margin-bottom: 50px;
+           width: 50%;
+           height: 100px;
+           margin: auto;
+           margin-top: 30px;
+           border: 1px solid rgb(77, 76, 76);
+           border-radius: 10px;
+           text-align: center;
+           align-items: center;
+           padding-top: 30px;
+       }
+       #total_cart>h1{
+           align-items: center;
+       }
+       .cart_data{
+           margin-bottom: 30px;
+       }
+        .cart_data>div{
+            border-bottom:1px solid white;
+            width: 60%;
+            margin: auto;
+            /* margin-left: 500px; */
+            justify-content: right;
+            
+        }
+.cart_data>div>img{
+ width:180px;
+ /* height:180px;  */
+ /* border: 1px solid red;   */
+ margin-top: 50px;
+ margin-bottom: 50px;
+}
+        
+        button{
+            width: 20%;
+            height: 35px;
+            color:black;
+            background-color: turquoise;
+            margin-top: 15px;
+            padding: 5px;
+            border-radius: 13px;
+            font-size: 17px;
+            cursor: pointer;
+        }
+        /* img{
+            border: 1px solid red;
+            width: 300px;
+            padding: 0px
+        } */
+        /* .image{
+            border: 1px solid red;
+
+        } */
+        /* footer */
+        .container{
+    display: flex;
+    background-color:#1d1d1d;
+    height: 500px;
+    width: 100%;
+    font-family: 'Gotham-bold',sans-serif;
+
+}
+.incontainer1{
+    color: white;
+}
+.incontainer1{
+    width: 33%;
+    text-align: left;
+    padding-left: 100px;
+    margin-top:100px;
+    margin-right: 40px;
+}
+.incontainer2{
+    width: 1px;
+    height: 80%;
+    background-color: white;
+    margin-top: 50px;
+}
+.incontainer3{
+    width: 33%;
+    display: flex;
+    margin-top:90px;
+    
+}
+.incontainer4{
+    width: 1px;
+    height: 80%;
+    background-color: white;
+    margin-top: 50px;
+}
+.incontainer5{
+    width: 33%;
+    display: flex;
+    margin-top:100px;
+}
+#innerdiv1{
+    padding-left: 20px;
+}
+#innerdiv1>p{
+   margin-left: 25px;
+   line-height: 40px;
+}
+.incontainer1>input{
+    margin-top: 30px;
+}
+#innerdiv2{
+    padding-left: 50px;
+}
+#innerdiv2>p{
+   margin-left: 15px;
+   line-height: 40px;
+}
+#internal1>p{
+   margin-left: 25px;
+   line-height: 40px;
+}
+#internal2>p{
+   margin-left: 20px;
+   line-height: 40px;
+  
+}
+#internal1{
+    padding-left: 20px;
+}
+#internal2{
+    padding-left: 50px;
+}
+
+
+body{
+    background-color:black;
+}
+p{
+   color: white;
+   font-size: 15px;
+   font-weight: bold;
+}
+#email{
+   color: white;
+   height: 50px;
+   border-radius: 8px;
+   width: 280px;
+}
+#copyright:before {
+   content: ' \00A9';
+} 
+#icon{
+   margin-left: 10px;
+}
+#fb{
+  margin-left: 25px;
+}
+#insta{
+   margin-left: 25px;
+}
+#in{
+   margin-left: 25px;
+}
+#tweet{
+   margin-left: 25px;
+}
+#aboutcroma{
+   margin-top: 30px;
+}
+#sitemap{
+   margin-top: 30px;
+}
+#tele{
+   margin-top: 40px;
+}
+#audio1{
+   margin-top: 80px;
+}
+#out{
+   position: relative;
+}
+
+#cart_click{
+    cursor: pointer;
+}
+.cart_data>div{
+    border-radius: 10px;
+    border-top: 1px solid white;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <!-- this is pin box -->
+        <div class="pin-box">
+            <i id="map" class="fas fa-map-marker-alt"></i>
+            <span>PINCODE</span>
+            <!-- <input type="number" value="274301"> -->
+            <span>
+                <p>274301</p>
+            </span>
+            <i id="pencil" class="fas fa-pencil-alt"></i>
+    
+        </div>
+        <!-- this is pin box -->
+    
+    </header>
+    
+    
+    
+    <!-- this is main div -->
+    <main-nav>
+        <div class="main-nav">
+    
+            <div class="logo">
+    
+                <img src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://www.croma.com/assets/images/croma_logo_dark.png/mxw_192,f_auto"
+                    alt="Croma Logo">
+    
+            </div>
+            <div class="menu">
+                <button>
+                    <i class="fas fa-bars"></i>
+                    Menu</button>
+            </div>
+    
+            <div class="search-box">
+                <div class="input-div">
+                    <input id="inp" type="text" placeholder="What are you looking for ?" />
+                </div>
+                <div class="search-btn">
+                    <button type="submit" id="search" onclick="press()"><i class="fa fa-search"></i></button>
+    
+                </div>
+    
+            </div>
+    
+            <div class="orders">
+                <p>ORDERS</p>
+            </div>
+    
+            <div class="my-account">
+                <p>MY ACCOUNT<i class="fas fa-angle-down"></i></p>
+    
+            </div>
+    
+            <div class="cart" id="cart_click">
+                <p><i class="fas fa-shopping-cart"></i>CART</p>
+                <div class="cart-count">
+                    <p></p>
+                </div>
+            </div>
+    
+    
+        </div>
+    </main-nav>
+    <!-- cart body -->
+    <!-- top box -->
+    <div id="total_cart">
+    
+    
+    </div>>
+    <div class="cart_data">
+
+        <!-- div
+<<<<<<< HEAD
+            <img>
+            <div>
+                name
+                id
+                price
+            </div>
+            <div>
+                <h1>This is heading</h1>
+            </div>
+        div -->
+
+        <!-- <div id="payment_div">
+            <h1 style="color: white;">This is payment page</h1>
+        </div> -->
+
+    </div>
+    <!-- footer -->
+    <div class="container">
+        <div class="incontainer1">
+            <p>CONNECT WITH US</p>
+            <input type="Email" name="" id="email" placeholder="Enter Email ID ">
+            <br>
+            <br>
+            <i id="icon" class="fab fa-youtube"></i>
+            <i id="fb" class="fab fa-facebook-f"></i>
+            <i id="insta" class="fab fa-instagram"></i>
+            <i id="in" class="fab fa-linkedin-in"></i>
+            <i id="tweet" class="fab fa-twitter"></i>
+            <p id="copyright">Copyright 2021 Croma. All rights <br> reserved</p>
+        </div>
+        <div class="incontainer2"></div>
+        <div class="incontainer3">
+            <div id="innerdiv1">
+                <p>USEFUL LINKS</p>
+                <P id="aboutcroma">About Croma</P>
+                <p>E-care</p>
+                <p>Help And Support</p>
+                <p>Franchise</p>
+                <p>FAQ</p>
+                <p>Oppurtunity</p>
+                <p>Return Policy</p>
+            </div>
+            <div id="innerdiv2">
+                <p id="sitemap">Site Map</p>
+                <p>Careers At Croma</p>
+                <p>Bulk Equity</p>
+                <p>Store Locator</p>
+                <p>Terms Of Use</p>
+                <p>Disclaimer</p>
+                <p>Delightful Programs</p>
+                <p>Privacy Policy</p>
+            </div>
+        </div>
+        <div class="incontainer4"></div>
+        <div class="incontainer5">
+            <div id="internal1">
+                <p>Products</p>
+                <p id="tele">Television & <br> Accessories</p>
+                <p>Home Appliances</p>
+                <p>Phone & Wearables</p>
+                <p>Computer & Tablets</p>
+                <p>Kitchen Appliances</p>
+            </div>
+            <div id="internal2">
+                <p id="audio">Audio & Video</p>
+                <p>Health & Fitness</p>
+                <p>Grooming & <br> Personal Care</p>
+                <p>Cameras & <br> Accessories</p>
+                <p>Smart Devices </p>
+                <p>Gaming </p>
+            </div>
+    
+        </div>
+    
+    </div>
+    
+</body>
+</html>
+<script>
+    var cart=JSON.parse(localStorage.getItem("cartItem")) || [];
+    //display(cart);
+    var total = 0;
+
+    if(cart.length==0){
+        var div=document.createElement('div');
+        div.style.border="1px solid black";
+        var heading2=document.createElement('h2');
+        var img=document.createElement('img');
+        img.setAttribute("src","https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/f_auto,q_auto,d_Croma%20Assets:no-product-image.jpg/Croma%20Assets/UI%20Assets//empty-cart.svg/mxw_2048,f_auto")
+        img.style.marginTop="25px";
+        img.style.marginLeft="40px";
+        heading2.textContent="Your Cart is empty";
+        heading2.style.color="white";
+        heading2.style.marginLeft="30px";
+
+        var para=document.createElement('p');
+        para.textContent="looks like you haven't made your choice";
+        para.style.color="white";
+        para.style.marginTop="25px";
+
+        div.append(heading2,para,img);
+        div.style.marginLeft="500px";
+        document.querySelector(".cart_data").append(div);
+
+        
+
+
+    }else{
+        console.log("Not empty",cart);
+
+        cart.map(function(ele,index){
+        var img=document.createElement("img");
+        img.setAttribute("src",ele.img);
+        img.setAttribute("class",'image');
+
+    var div1=document.createElement('div');
+    div1.style.marginBottom="80px";
+    
+    var div2=document.createElement('div');
+    div2.style.display="flex";
+    div2.style.marginTop="40px";
+
+    var name=document.createElement('h2');
+    name.textContent=ele.name;
+    name.style.color="white";
+
+    var prod_id=document.createElement('p');
+    prod_id.textContent=ele.id;
+    prod_id.style.color="white";
+
+    var price=document.createElement('h2');
+    price.textContent=ele.price;
+    price.style.color="white";
+
+    // adding the total price
+
+            var rs = ele.price;
+            rs = rs.split("");
+            for (var i = 0; i < rs.length; i++) {
+                if (rs[i] == '₹') {
+                    rs.splice(i, 1);
+                }
+                if (rs[i] == ',') {
+                    rs.splice(i, 1);
+                }
+                if (rs[i] == '.') {
+                    console.log("In the break", rs[i]);
+                    rs.splice(i, 3);
+                    break;
+                }
+            }
+            rs = rs.join("")
+            rs = +(rs);
+            total = total + rs;
+
+            console.log(typeof (rs), rs, total);
+
+    var del=document.createElement('button');
+    del.textContent="Delete";
+
+    del.addEventListener("click",function(index){
+        var cart=JSON.parse(localStorage.getItem("cartItem"))
+        cart.splice(index,1);
+        localStorage.setItem("cartItem",JSON.stringify(cart))
+
+        alert("Your item will be Deleted...");
+
+    })
+
+
+    div1.append(name,prod_id,price,del);
+    div2.append(img,div1);
+    document.querySelector(".cart_data").append(div2);
+        })
+
+    }
+    localStorage.setItem("Total_price", JSON.stringify(total));
+
+</script>
+<script>
+    var head1 = document.createElement('h1');
+        head1.textContent = `Your cart total is ₹ ${total}`
+
+        var checkout = document.createElement("button");
+        checkout.textContent = "Checkout";
+        checkout.addEventListener("click", function () {
+            window.location.href = "checkout.html";
+        })
+        document.querySelector("#total_cart").append(head1, checkout);
+
+
+        
+
+
+
+
+</script>
