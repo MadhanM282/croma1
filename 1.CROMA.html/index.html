@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/d7bc18a32d.js" crossorigin="anonymous"></script>
 
-    <title>Home Croma</title>
+    <title>Croma</title>
 </head>
 <style>
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-size: 15px;
    
     
     
@@ -27,139 +28,8 @@
 
    }
 
-   /* this is alishan */
-   
-.bg-modal {
-	background-color: rgba(0, 0, 0, 0.8);
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	display:none;
-	justify-content: center;
-	align-items: center;
-}
-
-.modal-contents {
-	height: 490px;
-	width: 605px;
-	background-color:#000000;
-	text-align: center;
-	padding: 20px;
-	position: relative;
-	border-radius: 4px;
-    color: white;
-
-}
-.signUp{
-    color:white;
-    font-size: 24px;
-    line-height: 28.8px;
-    margin-top: 55px;
-    margin-bottom: 20px;
-    font-weight: 500;
-}
-.track{
-    font-size: 14px;
-    line-height: 16.8px;
-font-weight: 600;
-
-}
-.mobile2{
-    background-color: black;
-    border: none;
-    border-bottom: 1px solid #00e9bf;
-    font-size: 22.5px;
-    width: 80%;
-    letter-spacing: 2px;
-    margin: auto;
-    padding: 5px;
-    font-weight: 400;
-    outline: 0px;
-    color: white;
-    margin-top: 25px;
-    display: block;
-    margin-bottom: 9px;
-    /* border: 1px solid red; */
-   
-    
-
-}
-.field{
-    color:#f75f5f;
-    font-size: 14px;
-    line-height: 16.8px;
-    font-weight: 400;
-    margin-bottom:25px ;
-    display: none;
-}
-.otp{
   
-   font-size: 12px;
-   height: 35px;
-   width: 100px;
-   font-weight: 700;
-   color: #103749;
-   background-color: #00e9bf;
-   display: block;
-   margin: auto;
-   border-radius: 5px;
-   border: 0px;
-   margin-bottom: 10px;
 
-}
-.otp:hover{
-    background-color:#00b594; 
-}
-.check{
-    border-radius: 5px;
-    margin-bottom: 35px;
-
-}
-.keep{
-    color: white;
-    font-size: 12px;
-    display: inline;
-}
-.exist{
-    font-size: 14px;
-    font-weight: 400px;
-}
-.exist>button{
-    color:#00e9bf;
-    background-color:transparent;
-    outline: 0px;
-    border: 0px;
-    cursor: pointer;
-}
-
-.by{
-    margin-top: 40px;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 18.34px;
-}
-.by>button{
-    color:#00e9bf;
-    background-color:transparent;
-    outline: 0px;
-    border: 0px;
-    font-weight: 600;
-}
-
-.close {
-	position: absolute;
-	top: 0;
-	right: 10px;
-	font-size: 42px;
-	color: #333;
-	transform: rotate(45deg);
-	cursor: pointer;
-	
-}
-.close:hover {
-    color: #666;
-}
    /* close */
 header{
     width:100%;
@@ -890,6 +760,7 @@ text-overflow: ellipsis;
 .cut{
     text-decoration: line-through;
     margin-left:15px;
+    color: rgb(114, 112, 112);
 }
 .star{
 color:cyan;
@@ -899,13 +770,22 @@ font-size:15px;
     margin-bottom:25px;
 }
 
+.fotter_text>p{
+    
+            color: white;
+            font-size: 14px;
+            line-height: 24PX;
+            font-family: 'Gotham-bold',sans-serif;
+            padding-left: 30px;
+
+       
+}
 
 
 
 
 
-
-.container{
+#container{
     display: flex;
     background-color:#1d1d1d;
     height: 500px;
@@ -920,7 +800,8 @@ font-size:15px;
     width: 33%;
     text-align: left;
     padding-left: 150px;
-    margin-top:10px;
+    margin-top:100px;
+    margin-right: 40px;
 }
 .incontainer2{
     width: 1px;
@@ -931,6 +812,8 @@ font-size:15px;
 .incontainer3{
     width: 33%;
     display: flex;
+    margin-top:90px;
+
     
 }
 .incontainer4{
@@ -942,10 +825,19 @@ font-size:15px;
 .incontainer5{
     width: 33%;
     display: flex;
+    margin-top:100px;
+
+}
+
+#innerdiv1{
+    padding-left: 20px;
 }
 #innerdiv1>p{
    margin-left: 25px;
    line-height: 40px;
+}
+#innerdiv2{
+    padding-left: 50px;
 }
 #innerdiv2>p{
    margin-left: 15px;
@@ -959,6 +851,12 @@ font-size:15px;
    margin-left: 20px;
    line-height: 40px;
   
+}
+#internal1{
+    padding-left: 20px;
+}
+#internal2{
+    padding-left: 50px;
 }
 
 body{
@@ -1068,7 +966,7 @@ p{
             </div>
 
             <div class="my-account button" id="button">
-                <p>SignUp<i class="fas fa-angle-down"></i></p>
+                <p>My Account<i class="fas fa-angle-down"></i></p>
 
             </div>
 
@@ -1167,31 +1065,6 @@ p{
         </div>
     </div>
 
-
-        <!-- Modal Section -->
-    
-        <div class="bg-modal">
-
-            <div class="modal-contents">
-        
-                <div class="close">+</div>
-                <h1 class="signUp">Sign up for Croma.com
-                </h1>
-                <p class="track">Track your orders,get exclusive offers, redeem points and more
-                </p>
-                <input type="text" class="mobile2" placeholder="Enter Mobile Number/Email">
-                <p class="field">This field is required</p>
-                <button class="otp">SEND OTP</button>
-                
-                <input type="checkbox" class="check" value="check">
-                <p class="keep">Keep me signed in</p>
-                <p class="exist"> Existing user? <button class="login"><span> Login</span></button></p> 
-    
-                <p class="by">By continuing you agree to our <button>Terms of Use</button>  & <button> Privacy Policy</button></p>
-    
-    
-    
-    <!-- modal section close -->
 
     <h3 class="color cllr">Mobiles</h3>
     <div class="cont">
@@ -1367,9 +1240,74 @@ p{
             <p class="star">★★★☆☆</p>
         </div>
     </div>
-    
+    <!-- fotter text -->
+    <div class="fotter_text">
+        <p>Launched in 2006, first one-of-its kind large format specialist retail electronics store, Croma, caters to over
+            12 Million happy customers for all of their multi-brand digital gadgets and home electronics. Since its
+            inception, Croma has become synonymous for all electronics needs, both online & in-store, with a wide product
+            range and tech-savvy staff with a will to help customers throughout their buying journeys.</p>
+        <br>
+        <P>With a promise of a ‘#BrighterEveryDay’ to its customers, Croma offers a world-class ambience and seamless
+            ‘omni-channel’ shopping experience to enjoy the best of both, the online shopping & the offline worlds. By
+            availing Croma’s omni-channel services, as a customer, one can enjoy online shopping and have the product
+            delivered at their doorstep or can avail the pick-up from a Croma store near me service. Customers can also opt
+            for Zip Express delivery service that makes sure to deliver the product at their doorstep within 3 hours in
+            select cities.</P>
+        <br>
+        <P>With over 200 brands and 190+ stores across 40+ major cities of India, Croma ensures fulfilling electronic needs
+            of each customer, and that there is something for everyone.</P>
+        <br>
+        <p>Whether you're setting up a new home or simply looking for an upgrade, Croma offers an eclectic range of
+            electronics to suit your needs. Browse through an array of Home & Kitchen Appliances such as Air Conditioners,
+            Refrigerators, Washing Machines, Vacuum Cleaners, Microwave, Air Fryers, Soup Makers, Cooktops, Dishwashers,
+            Water Heaters and many more such product categories.</p>
+        <br>
+        <p>Whether you're setting up a new home or simply looking for an upgrade, Croma offers an eclectic range of
+            electronics to suit your needs. Browse through an array of Home & Kitchen Appliances such as Air Conditioners,
+            Refrigerators, Washing Machines, Vacuum Cleaners, Microwave, Air Fryers, Soup Makers, Cooktops, Dishwashers,
+            Water Heaters and many more such product categories.</p>
+        <br>
+        <p>You can also make upgrading easy with an all-inclusive collection of LED TV, Speakers & Sound Systems. So,
+            whether you're looking at rekindling your lost hobby with a Digital Camera, or hoping to surprise your loved
+            ones with the latest Mobile, Laptop, or Desktop, Croma is a one-stop shop solution for all your needs</p>
+        <br>
+        <p>If that's not all, Croma also offers an assortment of various other product categories to simplify your life
+            including Home Safety Security, Wired & Wireless Headphones, Earphones, Smart Wearable Devices and all kinds of
+            Accessories.</p>
+        <br>
+        <p>With an attempt to become a go-to destination for all electronic goods, Croma has set up a platform called
+            Gadgets of Desire that showcases all the New@Croma, quick-pick & latest technology products. This section is
+            specially curated to match expectations of every innovative gadget lover, tech-savvy customer or for those
+            looking for unique gifting ideas. Gadgets of Desire focuses to satiate every fitness freak, travel lover,
+            in-house DJ or a computer geek. Croma assures your #BrighterTomorrow begins today!</p>
+        <br>
+        <p>To delight customers all along, Croma also launched its own label products in 2008. Brand Croma stands for Life
+            More Beautiful; a promise based not just on the beauty in the way they look, but mainly as a value they offer to
+            a customer’s life. This range is a perfect fit, especially for those who desire a completely feature-packed and
+            quality product in a pocket friendly price range. Additionally, to ensure that customers enjoy their product to
+            the fullest, Croma encourages purchase of Annual Maintenance Plans and Extended Warranty to safeguard their
+            product against mishaps and accidental damages during or beyond brand warranty.</p>
+        <br>
+        <p>Croma also rewards customers with cashbacks and discounts as a part of Privileges Programme to get more for their
+            money and exceptional after sales service. Members in this programme enjoy Loyalty Discounts, Pre-qualified
+            Credit, Exchange & Upgrade Benefits, Assured Lifetime Service and 14 Day Fix/Replace Assurance on select Home
+            Appliances and LEDs. To register, give a missed call on 1800-22-6699, and redeem exclusive benefits at the
+            nearest Croma store or on www.croma.com! This programme also includes Gift Card, a solution that gives customers
+            the freedom of choice between physical Gift Cards or e-Gift Vouchers of multiple denominations.</p>
+        <br>
+        <p>Croma offers multiple payment gateways to select preferred payment option. A customer can choose from various
+            payment modes like credit or debit cards, payment wallets and cash-on-delivery. Croma allows its customers to
+            avail Easy EMI options on credit & debit cards or through available consumer finance options.</p>
+        <br>
+        <p>Croma is a brand of Infiniti Retail Ltd., which is a wholly-owned subsidiary of Tata Sons, holding company of the
+            Tata Group.</p>
+        <br>
+    </div>
 
-    <div class="container">
+
+    <!-- fotter -->
+
+    <div id="container">
         <div class="incontainer1">
             <p>CONNECT WITH US</p>
             <input type="Email" name="" id="email" placeholder="Enter Email ID ">
@@ -1489,7 +1427,7 @@ function press() {
         window.location.href = "laptop.html"
     }
     if (val === "mobile") {
-        window.location.href = "mobile.html"
+        window.location.href = "trail.html"
     }
     if (val === "tv") {
         window.location.href = "tv.html"
@@ -1549,7 +1487,7 @@ function showSlides() {
 <script>
     document.querySelector(".mob").addEventListener("click", mob);
     function mob() {
-        window.location.href = "mobile.html"
+        window.location.href = "trail.html"
     }
     document.querySelector(".tele").addEventListener("click", tele);
     function tele() {
@@ -1580,53 +1518,4 @@ function showSlides() {
 
 
 
-</script>
-<script>
-    document.getElementById('button').addEventListener("click", function() {
-	document.querySelector('.bg-modal').style.display = "flex";
-});
-
-document.querySelector('.close').addEventListener("click", function() {
-	document.querySelector('.bg-modal').style.display = "none";
-});
-
-// now the functionallity
-document.querySelector(".otp").addEventListener("click",signUp);
-
- function signUp(){
-     
-     var phone = document.querySelector(".mobile2").value;
-     if(phone==""){
-        document.querySelector('.field').style.display = "contents";
-
-     }
-     else{
-        //  alert("OTP successfully send to "+ phone);
-        var mydata= document.querySelector(".mobile2").value="";
-         document.querySelector(".mobile2").placeholder="Please Enter Your OTP";
-        
-         // button name change
-        var otp = document.querySelector(".otp");
-         otp.textContent="Validate OTP";
-         
-          
-         
-             otp.addEventListener("click",newer);
-             function newer(){
-             window.location.href="home.html";
-             }
-         
-         
-     }
-
- }
-
- document.querySelector(".login").addEventListener("click", login);
-function login(){
-var signU = document.querySelector(".signUp").textContent="Sign in to Croma.com";
-var exist = document.querySelector(".exist");
-exist.textContent="";
-// document.querySelector(".by").textContent="Don't have an account?"+exist.value;
-    
-}
 </script>
