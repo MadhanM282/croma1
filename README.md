@@ -1,5 +1,5 @@
 # Croma Website Clone
-A clone of an e-commerce website where you can buy Electronics product like TV,Mobile,Laptop build in construct week team of 5 member
+A clone of an e-commerce website where you can buy Electronics product like TV,Mobile,Laptop build in construct week team of 5 member.
 ​
 ### Tech stacks used :
 
@@ -9,19 +9,28 @@ A clone of an e-commerce website where you can buy Electronics product like TV,M
 *  **Local Storage**
 
 
-## Landing Page :
-
-<img src="https://i.imgur.com/xwnDJXZ.png">
-<img src="https://i.imgur.com/x44NCgW.png">
-<img src="https://i.imgur.com/Q9vBzBV.png">
-<img src="https://i.imgur.com/F8bFWri.png">
-<img src="https://i.imgur.com/KaiTtjd.png">
-<img src="https://i.imgur.com/Vp3ULRl.png">
+## Pages Created
+<li>Landing Page</li>
+<li>Product Page</li>
+<li>Cart Page</li>
+<li>Order Page</li>
+<li>Payment Page</li>
 
 
-## Sign Up Page :
 
-<img src="https://i.imgur.com/dEBxRE8.png">
+## Functionality Added:
+
+<li>Responsiveness in landing page
+Implemented search functionalities in city selection page
+Added Signup and Login functionalities/validations
+Added Pick-up location and Date/Time selection functionalities
+Available cars viewing, and selection functionalites
+Sorting functionality according to Price
+Filter cars according to our choices
+Functionality to book a car
+Functionality to make a payment
+Added booking success display functionality
+Implemented all the above said functionalities using Databases, and enhanced dynamic flow of all data </li>
 
 ## Sign In Page :
 
