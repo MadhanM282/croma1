@@ -20,17 +20,13 @@ A clone of an e-commerce website where you can buy Electronics product like TV,M
 
 ## Functionality Added:
 
-<li>Responsiveness in landing page
-Implemented search functionalities in city selection page
-Added Signup and Login functionalities/validations
-Added Pick-up location and Date/Time selection functionalities
-Available cars viewing, and selection functionalites
-Sorting functionality according to Price
-Filter cars according to our choices
-Functionality to book a car
-Functionality to make a payment
-Added booking success display functionality
-Implemented all the above said functionalities using Databases, and enhanced dynamic flow of all data </li>
+<li>Implemented search functionalities in landing page</li>
+<li>Added Signup and Login functionalities/validations</li>
+<li>Available product viewing, and selection functionalites</li>
+<li>Sorting functionality according to Price</li>
+<li>Functionality to add product on a cart</li>
+<li>Functionality to make a payment</li>
+
 
 ## Sign In Page :
 
