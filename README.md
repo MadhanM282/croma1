@@ -4,10 +4,10 @@
 
 https://dazzling-ardinghelli-bb8d54.netlify.app/
 
----> Croma is an E-comerce website where users can order the products online
+- Croma is an E-comerce website where users can order the products online
 
----> we achived this using HTML,CSS,Java-Script
+- we achived this using HTML,CSS,Java-Script
 
+- we completed this project in 5 days along with 6 people as a team
 
-
-
+- in this project we implimented 
