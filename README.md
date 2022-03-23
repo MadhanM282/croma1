@@ -1,5 +1,5 @@
 # Croma  
-- [Live]
+- click me [Live]
 
 Our Construct Week Project (Croma.com) 
 Firstly as a team, we would like to express how grateful we are to Masai School for giving us this wonderful opportunity to learn under their guidance and for sharing our first project experience which we had done remotely. We are great thankful to Chandra Sir.
@@ -33,4 +33,4 @@ Takeaways
 To be able to work on a project the team members must possess leadership qualities, he should be able to contribute ideas and be respectful to others.
 Overall, it was a surreal experience, and we look forward to many such challenges.Thank you Chandra Sir fo such a great project..
 
-[Live]:dazzling-ardinghelli-bb8d54.netlify.app/
+[Live]:https://dazzling-ardinghelli-bb8d54.netlify.app/
